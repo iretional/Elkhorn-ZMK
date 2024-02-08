@@ -1,0 +1,17 @@
+identifier: elkhorn_flat_v1
+name: Elkhorn Flat v1
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - gpio
+  - counter
+  - usb_device
+  - nvs
+  - can
+  - kscan
+  - ble
+  - adc

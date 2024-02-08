@@ -6,17 +6,17 @@
 # distinguish build outputs from each other:
 #
 # board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
+# shield: [ "elkhorn_flat_left", "elkhorn_flat_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
 #   - board: nice_nano_v2
-#     shield: corne_left
+#     shield: elkhorn_flat_left
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-#     artifact-name: corne_left_with_logging
+#     artifact-name: elkhorn_flat_left_with_logging
 #
 ---
 include:
-  - board: corneish_zen_v2_left
-  - board: corneish_zen_v2_right
+  - board: elkhorn_flat_v1_left
+  - board: elkhorn_flat_v1_right

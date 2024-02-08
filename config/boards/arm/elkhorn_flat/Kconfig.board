@@ -1,0 +1,14 @@
+#
+# Copyright (c) 2024 Ireh Choi
+# SPDX-License-Identifier: MIT
+#
+
+config BOARD_ELKHORN_FLAT_V1_LEFT
+    bool "elkhorn flat left v1"
+    depends on SOC_NRF52833_QIAA
+    select BOARD_ELKHORN_FLAT_LEFT
+
+config BOARD_ELKHORN_FLAT_V1_RIGHT
+    bool "elkhorn flat right v1"
+    depends on SOC_NRF52833_QIAA
+    select BOARD_ELKHORN_FLAT_RIGHT
