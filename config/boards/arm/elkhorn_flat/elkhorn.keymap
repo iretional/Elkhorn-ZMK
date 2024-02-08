@@ -79,6 +79,12 @@
 }; 
 
 / {
+    chosen {
+        zmk,matrix_transform = &default_transform;
+    };
+};
+
+/ {
     behaviors {
         td_lwrNmid: tap_dance_lwrNmid {
             compatible = "zmk,behavior-tap-dance";
