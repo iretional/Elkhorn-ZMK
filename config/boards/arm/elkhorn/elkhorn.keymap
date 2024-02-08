@@ -6,7 +6,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-
 #define SH LSHFT 
 #define KP_MUL KP_MULTIPLY
 #define KP_DIV KP_DIVIDE
@@ -197,12 +196,21 @@
         };
     };
 
+    
+    macros {
+        ZMK_MACRO(zed_capt,wait-ms=<30>; tap-ms=<30>; bindings= 
+            <&macro_press &kp LSHFT>, <&macro_press &kp LGUI>
+            , <&macro_tap &kp S>
+            , <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;)
+
+        ZMK_MACRO(zed_btAllClr, wait-ms=<1>; tap-ms=<1>; bindings=<&bt BT0  &bt BT_CLR &bt BT1  &bt BT_CLR &bt BT2  &bt BT_CLR &bt BT3  &bt BT_CLR>;)
+    };
 
     
     keymap {
         compatible = "zmk,keymap";
 
-        main_layer { //0
+        default_layer { //0
             bindings = <
    &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                                          &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
    &kp LSHFT  &kp Q     &kp W     &kp E     &kp R     &kp T                                                           &kp Y      &kp U      &kp I      &kp O     &kp P     &kp EQUAL
@@ -272,15 +280,5 @@
                                &zed_capt    &trans       &trans       &none     &trans                             &trans    &none      &none      &none      &kp RCTRL  
             >;
         };
-    };
-    
-    macros {
-        
-        ZMK_MACRO(zed_capt,wait-ms=<30>; tap-ms=<30>; bindings= 
-            <&macro_press &kp LSHFT>, <&macro_press &kp LGUI>
-            , <&macro_tap &kp S>
-            , <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;)
-
-        ZMK_MACRO(zed_btAllClr, wait-ms=<1>; tap-ms=<1>; bindings=<&bt BT0  &bt BT_CLR &bt BT1  &bt BT_CLR &bt BT2  &bt BT_CLR &bt BT3  &bt BT_CLR>;)
     };
 };
