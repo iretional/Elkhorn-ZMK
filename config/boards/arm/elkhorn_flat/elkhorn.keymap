@@ -9,7 +9,7 @@
 
 #define SH LSHFT 
 #define KP_MUL KP_MULTIPLY
-#define KP_DIV KP_DIVIDE 7
+#define KP_DIV KP_DIVIDE
 #define LSP SPACE
 #define RSP SPACE
 #define CL CAPS
