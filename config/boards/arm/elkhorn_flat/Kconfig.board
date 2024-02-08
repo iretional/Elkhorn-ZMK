@@ -3,12 +3,12 @@
 # SPDX-License-Identifier: MIT
 #
 
-config BOARD_ELKHORN_FLAT_V1_LEFT
-    bool "elkhorn flat left v1"
+config BOARD_ELKHORN_V2_LEFT
+    bool "elkhorn left v2"
     depends on SOC_NRF52833_QIAA
-    select BOARD_ELKHORN_FLAT_LEFT
+    select BOARD_ELKHORN_LEFT
 
-config BOARD_ELKHORN_FLAT_V1_RIGHT
-    bool "elkhorn flat right v1"
+config BOARD_ELKHORN_V2_RIGHT
+    bool "elkhorn right v2"
     depends on SOC_NRF52833_QIAA
-    select BOARD_ELKHORN_FLAT_RIGHT
+    select BOARD_ELKHORN_RIGHT

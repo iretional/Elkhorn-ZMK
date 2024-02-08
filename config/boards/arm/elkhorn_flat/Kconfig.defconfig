@@ -3,21 +3,21 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_ELKHORN_FLAT_LEFT
+if BOARD_ELKHORN_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Elkhorn Flat"
+    default "Elkhorn"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif # BOARD_ELKHORN_FLAT_LEFT
+endif # BOARD_ELKHORN_LEFT
 
 
-if BOARD_ELKHORN_FLAT_LEFT || BOARD_ELKHORN_FLAT_RIGHT
+if BOARD_ELKHORN_LEFT || BOARD_ELKHORN_RIGHT
 
 config BOARD
-    default "elkhorn_flat"
+    default "elkhorn"
 
 config ZMK_SPLIT
     default y
@@ -26,5 +26,5 @@ config BT_CTLR
     default BT
 
 
-endif # BOARD_ELKHORN_FLAT_LEFT || BOARD_ELKHORN_FLAT_RIGHT
+endif # BOARD_ELKHORN_LEFT || BOARD_ELKHORN_RIGHT
 

@@ -5,18 +5,8 @@
 # pass flags to the build command and `artifact-name` to assign a name to
 # distinguish build outputs from each other:
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "elkhorn_flat_left", "elkhorn_flat_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: elkhorn_flat_left
-#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-#     artifact-name: elkhorn_flat_left_with_logging
 #
 ---
 include:
-  - board: elkhorn_flat_v1_left
-  - board: elkhorn_flat_v1_right
+  - board: elkhorn_v2_left
+  - board: elkhorn_v2_right

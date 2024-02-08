@@ -1,0 +1,14 @@
+file_format: "1"
+id: elkhorn_v2
+name: Elkhorn v2
+url: https://lowprokb.ca/collections/keyboards/products/elkhorn
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+siblings:
+  - elkhorn_v2_left
+  - elkhorn_v2_right

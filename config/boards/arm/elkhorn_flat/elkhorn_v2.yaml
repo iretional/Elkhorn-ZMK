@@ -1,5 +1,5 @@
-identifier: elkhorn_flat_v1
-name: Elkhorn Flat v1
+identifier: elkhorn_v2
+name: Elkhorn v2
 type: keyboard
 arch: arm
 toolchain:

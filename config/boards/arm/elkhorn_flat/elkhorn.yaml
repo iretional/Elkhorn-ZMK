@@ -1,6 +1,6 @@
-identifier: elkhorn_flat_v1
-name: Elkhorn Flat v1
-url: https://lowprokb.ca/collections/keyboards/products/corne-ish-zen
+identifier: elkhorn_v2
+name: Elkhorn Flat v2
+url: https://lowprokb.ca/collections/keyboards/products/elkhorn
 type: mcu
 arch: arm
 toolchain:

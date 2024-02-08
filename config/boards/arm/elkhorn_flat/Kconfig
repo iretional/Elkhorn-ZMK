@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: MIT
 #
 
-config BOARD_ELKHORN_FLAT_LEFT
+config BOARD_ELKHORN_LEFT
     bool
 
-config BOARD_ELKHORN_FLAT_RIGHT
+config BOARD_ELKHORN_RIGHT
     bool
