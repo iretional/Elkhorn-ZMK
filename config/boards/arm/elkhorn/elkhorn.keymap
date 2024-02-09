@@ -6,11 +6,12 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-#define SH LSHFT 
-#define KP_MUL KP_MULTIPLY
-#define KP_DIV KP_DIVIDE
-#define LSP SPACE
-#define RSP SPACE
+#define SHFT LSHFT 
+#define CTRL LCTRL
+#define ALT LALT
+
+#define KMUL KP_MULTIPLY
+#define KDIV KP_DIVIDE
 #define CL CAPS
 #define P0 KP_N0
 #define P1 KP_N1
@@ -23,8 +24,8 @@
 #define P8 KP_N8
 #define P9 KP_N9
 
-#define VOL_DN C_VOL_DN
-#define VOL_UP C_VOL_UP
+#define VDN C_VOL_DN
+#define VUP C_VOL_UP
 #define CALC C_AL_CALC
 
 #define BT0 BT_SEL 0
@@ -78,13 +79,6 @@
 
 / {
     behaviors {
-        td_lwrNmid: tap_dance_lwrNmid {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LWR_AND_MID";
-            #binding-cells = <0>;
-            tapping-term-ms = <280>;
-            bindings = <&mo 4>, <&mo 2>, <&mo 3>;
-        };
         td_rseNmid: tap_dance_rseNmid {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_RSE_AND_MID";
@@ -198,35 +192,81 @@
 
     
     macros {
+        ZMK_MACRO(BTAllClr, wait-ms=<1>; tap-ms=<1>; bindings=<
+            &bt BT_SEL 0  &bt BT_CLR &bt BT_SEL 1  &bt BT_CLR &bt BT_SEL 2  &bt BT_CLR 
+            &bt BT_SEL 3  &bt BT_CLR &bt BT_SEL 4  &bt BT_CLR >;)
+            
+        ZMK_MACRO(BTC0, wait-ms=<1>; tap-ms=<1>; bindings=< &bt BT_SEL 0  &bt BT_CLR >;)
+        ZMK_MACRO(BTC1, wait-ms=<1>; tap-ms=<1>; bindings=< &bt BT_SEL 1  &bt BT_CLR >;)
+        ZMK_MACRO(BTC2, wait-ms=<1>; tap-ms=<1>; bindings=< &bt BT_SEL 2  &bt BT_CLR >;)
+        ZMK_MACRO(BTC3, wait-ms=<1>; tap-ms=<1>; bindings=< &bt BT_SEL 3  &bt BT_CLR >;)
+        ZMK_MACRO(BTC4, wait-ms=<1>; tap-ms=<1>; bindings=< &bt BT_SEL 4  &bt BT_CLR >;)
+
         ZMK_MACRO(zed_capt,wait-ms=<30>; tap-ms=<30>; bindings= 
             <&macro_press &kp LSHFT>, <&macro_press &kp LGUI>
             , <&macro_tap &kp S>
             , <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;)
+     };
 
-        ZMK_MACRO(zed_btAllClr, wait-ms=<1>; tap-ms=<1>; bindings=<&bt BT0  &bt BT_CLR &bt BT1  &bt BT_CLR &bt BT2  &bt BT_CLR &bt BT3  &bt BT_CLR>;)
+     combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <14 15>;
+            layers = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_del {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <15 16>;
+            layers = <0 1>;
+            bindings = <&kp DEL>;
+        };
+        combo_enter {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <26 27>;
+            layers = <0 1>;
+            bindings = <&kp RET>;
+        };
+        combo_bspc {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <27 28>;
+            layers = <0 1>;
+            bindings = <&kp BSPC>;
+        };
     };
-
     
+/* --------------------------------------------------------------------------------
+// | 0  | 1  | 2  | 3  | 4  | 5  |                          | 6  | 7  | 8  | 9  | 10 | 11 |
+// | 12 | 13 | 14 | 15 | 16 | 17 |                          | 18 | 19 | 20 | 21 | 22 | 23 |
+// | 24 | 25 | 26 | 27 | 28 | 29 |                          | 30 | 31 | 32 | 33 | 34 | 35 |
+// | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 |      | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 |
+//           | 52 |    | 53 | 54 | 55 | 56 |      | 57 | 58 | 59 | 60 |    | 61 |
+*/
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { //0
             bindings = <
-   &kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                                          &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
-   &kp LSHFT  &kp Q     &kp W     &kp E     &kp R     &kp T                                                           &kp Y      &kp U      &kp I      &kp O     &kp P     &kp EQUAL
-   &kp LALT   &kp A     &kp S     &kp D     &kp F     &kp G                                                           &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-   &kp LCTRL  &kp COMMA &kp Z     &kp X     &kp C     &kp V     &td_lwrNmid &mo 3            &kp LALT  &td_rseNmid  &kp B      &kp N      &kp M      &kp DOT   &kp FSLH  &kp BSLH
-                        &kp LGUI  &sk LSHFT &kp SPACE &kp BSPC  &kp TAB                                    &kp LCTRL   &kp RET   &kp SPACE   &sk RSHFT  &kp RALT
+   &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+   &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T                                    &kp Y     &kp U     &kp I     &kp O     &kp P     &kp EQUAL
+   &kp CTRL  &kp A     &kp S     &kp D     &kp F     &kp G                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+   &kp SHFT  &kp COMMA &kp Z     &kp X     &kp C     &kp V     &mo 2 &kp CAPS  &kp LALT &mo 4 &kp B     &kp N     &kp M     &kp DOT   &kp FSLH  &kp BSLH
+                        &kp LGUI           &kp ALT   &kp SPACE &mo 1 &kp ESC   &kp CTRL &mo 3 &kp SPACE &kp SHFT            &kp RALT
             >;
         };
 
-        second_layer { //1
+        left_lwr_layer { //1
             bindings = <
-   &trans         &trans    &trans    &trans    &trans    &trans                                                     &trans    &trans    &trans    &trans    &trans      &trans
-   &kp LSHIFT &kp Q     &kp W     &kp E     &kp R     &kp T                                                          &kp Y     &kp U     &kp I     &kp O     &kp P       &kp EQUAL
-   &kp LALT   &kp A     &kp S     &kp D     &kp F     &kp G                                                          &kp H     &kp J     &kp K     &kp L     &kp SEMI    &kp SQT
-   &kp LCTRL  &kp COMMA &kp Z     &kp X     &kp C     &kp V     &trans   &none                &trans      &trans     &kp B     &kp N     &kp M     &kp DOT   &kp FSLH    &kp BSLH   
-                            &kp LGUI  &trans    &trans    &trans    &kp TAB                        &trans      &trans      &trans      &trans      &trans
+   &trans    &trans    &trans    &trans    &trans    &trans                                   &trans    &trans    &trans    &trans    &trans    &trans
+   &kp TAB   &kp N7    &kp N7    &kp N8    &kp N9    &kp T                                    &kp Y     &kp U     &kp I     &kp O     &kp P     &kp EQUAL
+   &kp CTRL  &kp A     &kp N4    &kp N5    &kp N6    &kp G                                    &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+   &kp SHFT  &kp COMMA &kp N1    &kp N2    &kp N3    &kp V     &mo 2 &kp CAPS  &kp LALT &mo 4 &kp B     &kp N     &kp M     &kp DOT   &kp FSLH  &kp BSLH
+                        &kp LGUI           &kp ALT   &kp SPACE &mo 1 &kp ESC   &kp CTRL &mo 3 &kp SPACE &kp SHFT            &kp RALT
             >;
         };
         
