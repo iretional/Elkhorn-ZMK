@@ -330,22 +330,22 @@
         
         left_both_layer { //5
             bindings = <
-   &kp MINUS  &kp N0    &kp N9    &kp N8    &kp N7    &kp N6                                                          &kp N5     &kp N4     &kp N3     &kp N2    &kp N1    &kp GRAVE
-   &kp EQUAL  &kp P     &kp O     &kp I     &kp U     &kp Y                                                           &kp T      &kp R      &kp E      &kp W     &kp Q     &kp LSHFT
-   &kp SQT    &kp SEMI  &kp L     &kp K     &kp J     &kp H                                                           &kp G      &kp F      &kp D      &kp S     &kp A     &kp LALT
+   &kp MINUS  &kp N0    &kp N9    &kp N8    &kp N7    &kp N6                                                     &kp N5     &kp N4     &kp N3     &kp N2    &kp N1    &kp GRAVE
+   &kp EQUAL  &kp P     &kp O     &kp I     &kp U     &kp Y                                                      &kp T      &kp R      &kp E      &kp W     &kp Q     &kp LSHFT
+   &kp SQT    &kp SEMI  &kp L     &kp K     &kp J     &kp H                                                      &kp G      &kp F      &kp D      &kp S     &kp A     &kp LALT
    &kp BSLH   &kp FSLH  &kp DOT   &kp M     &kp N     &kp B     &none       &trans             &kp CAPS  &trans  &kp V      &kp C      &kp X      &kp Z     &kp COMMA &kp LCTRL   
-                        &kp RALT  &trans    &trans    &trans   &trans                                   &trans   &kp RET   &kp SPACE   &sk RSHFT  &kp RALT
+                        &kp RALT  &trans    &trans    &trans   &trans                                    &trans  &kp RET   &kp SPACE   &sk RSHFT  &kp RALT
             >;
         };
 
         
         right_both_layer { //6
             bindings = <
-   &none        &none        &none        &none        &none        &none     &none     &trans               &none       &none     &none      &none      &none      &none     &none     &none
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                                          &kp C_VOL_DN &kp C_VOL_UP &none &none     &none     &none
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                                          &none      &none      &none      &none     &none     &none 
-   &trans       &trans       &none        &none        &kp CALC     &none     &trans   &trans               &trans    &trans   &none      &none      &none      &none     &none     &none
-                               &trans    &trans       &trans       &trans   &trans                             &trans    &trans     &trans    &trans    &trans
+&none        &none        &none        &none        &none        &none                                              &none      &none      &none     &none     &none     &none
+&bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                              &kp C_VOL_DN &kp C_VOL_UP &none &none     &none     &none
+&bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                              &none      &none      &none     &none     &none     &none 
+&none        &none        &none        &none        &none        &none     &trans   &trans        &trans   &trans   &none      &none      &none     &none     &none     &none
+                          &trans       &trans       &trans       &trans    &trans                          &trans   &trans     &trans     &trans    &trans
             >;
         };
     };
