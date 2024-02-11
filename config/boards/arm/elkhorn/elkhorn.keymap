@@ -125,13 +125,6 @@
             bindings = <&kp CAPS>,  <&kp KP_NUM>;
         };
         
-        td_btAllClr: tap_dance_btAllClr  {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_btAllClr";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt BT_CLR>, <&zed_btAllClr>;
-        };
         td_mvu: tap_dance_mvu{
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MVU";
