@@ -46,12 +46,6 @@
 #define VUP C_VOL_UP
 #define CALC C_AL_CALC
 
-#define BT0 BT_SEL 0
-#define BT1 BT_SEL 1
-#define BT2 BT_SEL 2
-#define BT3 BT_SEL 3
-#define BT4 BT_SEL 4
-
 #define MOVE_U MOVE_VERT(-200)
 #define MOVE_D MOVE_VERT(200)
 #define MOVE_L MOVE_HOR(-200)
@@ -348,8 +342,8 @@
         right_both_layer { //6
             bindings = <
    &kp ESC      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                                                         &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp F11
-   &td_btAllClr &bt BT0      &bt BT1      &bt BT2      &bt BT3      &none                                                          &kp VOL_DN &kp VOL_UP &kp C_MUTE &none     &none     &kp F12
-   &trans       &none        &none        &none        &none        &none                                                          &none      &none      &none      &none     &none     &none 
+   &td_btAllClr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                                          &kp VOL_DN &kp VOL_UP &kp C_MUTE &none     &none     &kp F12
+   &td_btAllClr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                                          &none      &none      &none      &none     &none     &none 
    &trans       &trans       &none        &none        &kp CALC     &none     &none     &trans               &none       &none     &none      &none      &none      &none     &none     &none
                                &zed_capt    &trans       &trans       &none     &trans                             &trans    &none      &none      &none      &kp RCTRL  
             >;
