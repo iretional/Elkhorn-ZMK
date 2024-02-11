@@ -266,20 +266,6 @@
             layers = <0 1>;
             bindings = <&kp BSPC>;
         };
-        combo_mul {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <25 26>;
-            layers = <1>;
-            bindings = <&kp KP_MULTIPLY>;
-        };
-        combo_div {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <13 14>;
-            layers = <1>;
-            bindings = <&kp KP_DIVIDE>;
-        };
     };
     
 /* --------------------------------------------------------------------------------
