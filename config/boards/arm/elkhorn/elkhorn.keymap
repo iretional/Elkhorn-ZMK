@@ -289,9 +289,9 @@
         left_lwr_layer { //1
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
-&td_cpnm  &minbar   &kp N7    &kp N8    &kp N9    &kp GRAVE                                   &kp LPAR  &kp RPAR  &kp LT    &kp GT    &kp P     &kp BPC
-&trans    &kp KPLS  &kp N4    &kp N5    &kp N6    &kp EQUAL                                   &kp LBRC  &kp RBRC  &kp K     &kp L     &kp SEMI  &kp SQT
-&trans    &kp KDOT  &kp N1    &kp N2    &kp N3    &kp N0    &trans &trans    &trans  &trans   &kp LBKT  &kp RBKT  &kp M     &trans    &kp BSLH  &kp RCTRL
+&kp GRAVE &minbar   &kp N7    &kp N8    &kp N9    &mm_mhu                                     &kp LPAR  &kp RPAR  &kp LT    &kp GT    &kp P     &kp BPC
+&kp EQUAL &kp KPLS  &kp N4    &kp N5    &kp N6    &mm_mhd                                     &kp LBRC  &kp RBRC  &kp K     &kp L     &kp SEMI  &kp SQT
+&td_cpnm  &kp KDOT  &kp N1    &kp N2    &kp N3    &kp N0    &trans &trans    &trans  &trans   &kp LBKT  &kp RBKT  &kp M     &trans    &kp BSLH  &kp RCTRL
                     &CAPT     &trans    &trans    &trans    &trans                   &trans   &trans    &trans  &trans    &trans
             >;
         };
