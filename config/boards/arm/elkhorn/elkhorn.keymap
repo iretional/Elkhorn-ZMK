@@ -14,8 +14,8 @@
 
 #define MOUSE_MOVE_NEG_DEFAULT -300
 #define MOUSE_MOVE_DEFAULT 300
-#define MOUSE_MOVE_NEG_FAST -80000 
-#define MOUSE_MOVE_FAST 80000 
+#define MOUSE_MOVE_NEG_FAST -1000 
+#define MOUSE_MOVE_FAST 1000 
 
 #define SHFT LSHFT 
 #define CTRL LCTRL
@@ -31,16 +31,6 @@
 #define KNUM KP_NUM
 
 #define CL CAPS
-#define P0 KP_N0
-#define P1 KP_N1
-#define P2 KP_N2
-#define P3 KP_N3
-#define P4 KP_N4
-#define P5 KP_N5
-#define P6 KP_N6
-#define P7 KP_N7
-#define P8 KP_N8
-#define P9 KP_N9
 
 #define VDN C_VOL_DN
 #define VUP C_VOL_UP
@@ -54,10 +44,10 @@
 #define MOVE_D9 MOVE_VERT(900)
 #define MOVE_L9 MOVE_HOR(-900)
 #define MOVE_R9 MOVE_HOR(900)
-#define SCL_U SCROLL_VERT(10)
-#define SCL_D SCROLL_VERT(-10)
-#define SCL_L SCROLL_HOR(-10)
-#define SCL_R SCROLL_HOR(10)
+#define SCL_U SCROLL_VERT(17)
+#define SCL_D SCROLL_VERT(-17)
+#define SCL_L SCROLL_HOR(-17)
+#define SCL_R SCROLL_HOR(17)
 #define SCL_U12 SCROLL_VERT(18)
 #define SCL_D12 SCROLL_VERT(-18)
 #define SCL_L12 SCROLL_HOR(-18)
