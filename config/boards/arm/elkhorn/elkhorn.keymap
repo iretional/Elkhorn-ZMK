@@ -308,11 +308,11 @@
 
         right_lwr_layer { //3
                 bindings = <
-   &trans    &none         &mwh SCL_U12  &mmv MOVE_U9 &mwh SCL_D12 &none                                                &kp RPAR     &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_MINUS &trans
-   &trans    &none         &mm_mhu   &mm_mvu  &mm_mhd   &none                                                    &kp RBRC     &kp KP_N4    &kp KP_N5 &kp KP_N6  &kp KP_PLUS  &trans
-   &trans    &mmv MOVE_L9  &mm_mvl   &mm_mvd  &mm_mvr  &mmv MOVE_R9                                                     &kp RBKT     &kp KP_N1    &kp KP_N2 &kp KP_N3  &kp KP_PLUS  &trans
-   &trans    &trans        &mm_mhl   &mmv MOVE_D9   &mm_mhr  &none    &trans     &trans      &kp KP_NUM &trans    &kp GT       &kp KP_N0    &kp KP_N0 &kp KP_DOT &kp KP_PLUS  &trans  
-                           &none     &mkp LCLK   &mkp LCLK   &mkp RCLK  &mkp MCLK                               &trans    &kp KP_ENTER &trans       &trans    &kp RALT
+   &trans    &none         &mwh SCL_U12  &mmv MOVE_U9 &mwh SCL_D12 &none                                         &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &none         &mm_mhu   &mm_mvu  &mm_mhd   &none                                                    &kp F7    &kp F8    &kp F9    &kp F12   &kp P     &kp EQUAL
+   &trans    &mmv MOVE_L9  &mm_mvl   &mm_mvd  &mm_mvr  &mmv MOVE_R9                                              &kp F4    &kp F5    &kp F6    &kp F11   &kp SEMI  &kp SQT
+   &trans    &trans        &mm_mhl   &mmv MOVE_D9   &mm_mhr  &none    &trans     &trans      &kp KP_NUM &trans   &kp F1    &kp F2    &kp F3    &kp F10   &kp FSLH  &kp RCTRL
+                           &none     &mkp LCLK   &mkp LCLK   &mkp RCLK  &mkp MCLK                       &trans   &trans    &trans    &trans    &trans
             >;
         };
 
@@ -332,8 +332,8 @@
    &kp MINUS  &kp N0    &kp N9    &kp N8    &kp N7    &kp N6                                                     &kp N5     &kp N4     &kp N3     &kp N2    &kp N1    &kp GRAVE
    &kp EQUAL  &kp P     &kp O     &kp I     &kp U     &kp Y                                                      &kp T      &kp R      &kp E      &kp W     &kp Q     &kp LSHFT
    &kp SQT    &kp SEMI  &kp L     &kp K     &kp J     &kp H                                                      &kp G      &kp F      &kp D      &kp S     &kp A     &kp LALT
-   &kp BSLH   &kp FSLH  &kp DOT   &kp M     &kp N     &kp B     &none       &trans             &kp CAPS  &trans  &kp V      &kp C      &kp X      &kp Z     &kp COMMA &kp LCTRL   
-                        &kp RALT  &trans    &trans    &trans   &trans                                    &trans  &kp RET   &kp SPACE   &sk RSHFT  &kp RALT
+   &kp RALT   &kp FSLH  &kp DOT   &kp M     &kp N     &kp B     &none       &trans             &kp CAPS  &trans  &kp V      &kp C      &kp X      &kp Z     &kp COMMA &kp LCTRL   
+                        &kp COMMA &trans    &trans    &trans   &trans                                    &trans  &kp RET   &kp SPACE   &sk RSHFT  &kp RALT
             >;
         };
 
