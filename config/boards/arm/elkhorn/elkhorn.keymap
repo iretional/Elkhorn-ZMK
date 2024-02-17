@@ -136,56 +136,56 @@
             label = "MOD_MORPH_MVU";
             #binding-cells = <0>;
             bindings = <&mmv MOVE_VERT(MOUSE_MOVE_NEG_DEFAULT)>,  <&mmv MOVE_VERT(MOUSE_MOVE_NEG_FAST)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mvd: mod_morph_mvd{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MVD";
             #binding-cells = <0>;
             bindings = <&mmv MOVE_VERT(MOUSE_MOVE_DEFAULT)>,  <&mmv MOVE_VERT(MOUSE_MOVE_FAST)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mvl: mod_morph_mvl{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MVL";
             #binding-cells = <0>;
             bindings = <&mmv MOVE_HOR(MOUSE_MOVE_NEG_DEFAULT)>,  <&mmv MOVE_HOR(MOUSE_MOVE_NEG_FAST)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mvr: mod_morph_mvr{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MVR";
             #binding-cells = <0>;
             bindings = <&mmv MOVE_HOR(MOUSE_MOVE_DEFAULT)>,  <&mmv MOVE_HOR(MOUSE_MOVE_FAST)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mhu: mod_morph_mhu{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MHU";
             #binding-cells = <0>;
             bindings = <&mwh SCL_U>,  <&mwh SCL_U12>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mhd: mod_morph_mhd{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MHD";
             #binding-cells = <0>;
             bindings = <&mwh SCL_D>,  <&mwh SCL_D12>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mhl: mod_morph_mhl{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MHL";
             #binding-cells = <0>;
             bindings = <&mwh SCL_L>,  <&mwh SCL_L12>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         mm_mhr: mod_morph_mhr{
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_MHR";
             #binding-cells = <0>;
             bindings = <&mwh SCL_R>,  <&mwh SCL_R12>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
     };
     
@@ -282,16 +282,16 @@
 &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T                                       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BPC
 &kp CTRL  &kp A     &kp S     &kp D     &kp F     &kp G                                       &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
 &kp SHFT  &kp ALT   &kp Z     &kp X     &kp C     &kp V     &none    &none    &none &none     &kp B     &kp N     &kp M     &kp DOT   &kp FSLH  &kp RALT
-                    &kp LGUI  &none     &kp SPC   &hd 1 BPC &hd 2 RET               &hd 4 RET &hd 3 RET &kp SHFT  &none     &kp COMMA
+                    &kp LGUI  &none     &hd 1 SPC &hd 2 BPC &hd 2 RET               &hd 4 RET &hd 3 RET &kp SHFT  &none     &kp COMMA
             >;
         };
 
         left_lwr_layer { //1
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
-&kp GRAVE &minbar   &kp N7    &kp N8    &kp N9    &mm_mhu                                     &kp LPAR  &kp RPAR  &kp LT    &kp GT    &kp P     &kp BPC
-&kp EQUAL &kp KPLS  &kp N4    &kp N5    &kp N6    &mm_mhd                                     &kp LBRC  &kp RBRC  &kp K     &kp L     &kp SEMI  &kp SQT
-&td_cpnm  &kp KDOT  &kp N1    &kp N2    &kp N3    &kp N0    &trans &trans    &trans  &trans   &kp LBKT  &kp RBKT  &kp M     &trans    &kp BSLH  &kp RCTRL
+&td_cpnm  &minbar   &kp N7    &kp N8    &kp N9    &kp GRAVE                                   &kp LPAR  &kp RPAR  &kp LT    &kp GT    &kp P     &kp BPC
+&trans    &kp KPLS  &kp N4    &kp N5    &kp N6    &kp KP_EQUAL                                &kp LBRC  &kp RBRC  &kp K     &kp L     &kp SEMI  &kp SQT
+&trans    &kp KDOT  &kp N1    &kp N2    &kp N3    &kp N0    &trans &trans    &trans  &trans   &kp LBKT  &kp RBKT  &kp M     &trans    &kp BSLH  &kp RCTRL
                     &CAPT     &trans    &trans    &trans    &trans                   &trans   &trans    &trans  &trans    &trans
             >;
         };
@@ -299,9 +299,9 @@
         left_rse_layer { //2
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &kp PG_UP &kp HOME  &kp UP    &kp END   &mm_mhu                                     &kp F7    &kp F8    &kp F9    &kp F12   &kp P     &kp BPC
-&trans    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &mm_mhd                                     &kp F4    &kp F5    &kp F6    &kp F11   &kp SEMI  &kp SQT
-&trans    &mkp LCLK &kp PG_UP &mkp LCLK &mkp MCLK &mkp RCLK &trans &trans    &trans  &trans   &kp F1    &kp F2    &kp F3    &kp F10   &kp FSLH  &kp RCTRL
+&trans    &kp PG_UP &kp HOME  &kp UP    &kp END   &mm_mhu                                     &trans    &kp F7    &kp F8    &kp F9    &kp F12   &kp BPC
+&trans    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &mm_mhd                                     &trans    &kp F4    &kp F5    &kp F6    &kp F11   &kp SQT
+&trans    &mkp LCLK &mkp LCLK &mkp LCLK &mkp MCLK &mkp RCLK &trans &trans    &trans  &trans   &trans    &kp F1    &kp F2    &kp F3    &kp F10   &kp RCTRL
                     &mkp RCLK &trans    &trans    &trans    &trans                   &trans   &trans    &trans  &trans    &trans
             >;
         };
