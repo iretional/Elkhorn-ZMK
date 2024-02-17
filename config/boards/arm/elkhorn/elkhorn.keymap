@@ -193,11 +193,11 @@
         compatible = "zmk,conditional-layers";
         left_both_layer {
             if-layers = <1 2>;
-            then-layer = <5>;
+            then-layer = <7>;
         };
         right_both_layer {
-            if-layers = <3 4>;
-            then-layer = <6>;
+            if-layers = <4 5>;
+            then-layer = <8>;
         };
     };
 
@@ -289,7 +289,7 @@
 &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T                                       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BPC
 &kp CTRL  &kp A     &kp S     &kp D     &kp F     &kp G                                       &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
 &kp SHFT  &kp ALT   &kp Z     &kp X     &kp C     &kp V     &none    &none    &none &none     &kp B     &kp N     &kp M     &kp DOT   &kp FSLH  &kp RALT
-                    &kp LGUI  &none     &hd 1 SPC &hd 2 BPC &hd 2 RET               &hd 4 RET &hd 3 RET &kp SHFT  &none     &kp COMMA
+                    &kp LGUI  &none     &hd 1 SPC &hd 2 BPC &hd 3 RET               &hd 6 ESC &hd 5 RET &hd 4 SHFT &none     &kp COMMA
             >;
         };
 
@@ -313,7 +313,17 @@
             >;
         };
 
-        right_lwr_layer { //3
+        left_sub_layer { //3
+            bindings = <
+&trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &kp F7    &kp F8    &kp F9    &kp F12                                     &kp LPAR  &kp RPAR  &kp LT    &kp GT    &kp P     &kp BPC
+&trans    &trans    &kp F4    &kp F5    &kp F6    &kp F11                                     &kp LBRC  &kp RBRC  &kp K     &kp L     &kp SEMI  &kp SQT
+&trans    &trans    &kp F1    &kp F2    &kp F3    &kp F10   &trans &trans    &trans  &trans   &kp LBKT  &kp RBKT  &kp M     &trans    &kp BSLH  &kp RCTRL
+                    &trans    &trans    &trans    &trans    &trans                   &trans   &trans    &trans  &trans    &trans
+            >;
+        };
+
+        right_lwr_layer { //4
                 bindings = <
    &trans    &none         &mwh SCL_U12  &mmv MOVE_U9 &mwh SCL_D12 &none                                         &trans    &trans    &trans    &trans    &trans    &trans
    &trans    &none         &mm_mhu   &mm_mvu  &mm_mhd   &none                                                    &kp F7    &kp F8    &kp F9    &kp F12   &kp P     &kp EQUAL
@@ -323,7 +333,7 @@
             >;
         };
 
-        right_rse_layer { //4
+        right_rse_layer { //5
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &kp KDIV  &kp HOME  &kp UP    &kp END   &kp GRAVE                                   &kp F7    &kp F8    &kp F9    &kp F12   &kp P     &kp EQUAL
@@ -333,8 +343,17 @@
             >;
         };
 
+        right_sub_layer { //6
+            bindings = <
+&trans    &trans    &trans    &trans    &trans    &trans                                      &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &kp KDIV  &kp HOME  &kp UP    &kp END   &kp GRAVE                                   &kp F7    &kp F8    &kp F9    &kp F12   &kp P     &kp EQUAL
+&trans    &kp KMUL  &kp LEFT  &kp DOWN  &kp RIGHT &kp EQUAL                                   &kp F4    &kp F5    &kp F6    &kp F11   &kp SEMI  &kp SQT
+&trans    &kp KDOT  &kp PG_UP &kp DOWN  &kp PG_DN &kp N0    &trans &trans    &trans  &trans   &kp F1    &kp F2    &kp F3    &kp F10   &kp FSLH  &kp RCTRL
+                    &kp LGUI  &trans    &trans    &trans    &trans                   &trans   &trans    &trans  &trans    &trans
+            >;
+        };
         
-        left_both_layer { //5
+        left_both_layer { //7
             bindings = <
    &kp MINUS  &kp N0    &kp N9    &kp N8    &kp N7    &kp N6                                                     &kp N5     &kp N4     &kp N3     &kp N2    &kp N1    &kp GRAVE
    &kp EQUAL  &kp P     &kp O     &kp I     &kp U     &kp Y                                                      &kp T      &kp R      &kp E      &kp W     &kp Q     &kp LSHFT
@@ -345,7 +364,7 @@
         };
 
         
-        right_both_layer { //6
+        right_both_layer { // 8
             bindings = <
 &none        &none        &none        &none        &none        &none                                              &none      &none      &none     &none     &none     &none
 &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none                                              &kp C_VOL_DN &kp C_VOL_UP &none &none     &none     &none
